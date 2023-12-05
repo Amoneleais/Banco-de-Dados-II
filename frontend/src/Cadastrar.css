@@ -1,0 +1,28 @@
+/* Inserir.css */
+.box {
+    position:absolute;
+    top:50%;
+    left:50%;
+    margin-left:-210px;
+    margin-top:-300px;
+    width: 50%;
+    max-width: 450px;
+    padding: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+  
+.alert {
+    margin-bottom: 15px;
+}
+  
+.form-label {
+    margin-bottom: 8px;
+}
+  
+.box .form-control {
+    width: 100%;
+    margin-bottom: 15px;
+}
