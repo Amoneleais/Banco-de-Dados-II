@@ -141,19 +141,6 @@ export default function Inserir() {
                 </div>
     
                 <div className="mb-3">
-                <label htmlFor="address" className="form-label">
-                    Endereço
-                </label>
-                <input
-                    type="text"
-                    className="form-control"
-                    id="address"
-                    value={address}
-                    onChange={(e) => setAddress(e.target.value)}
-                />
-                </div>
-    
-                <div className="mb-3">
                 <label htmlFor="cep" className="form-label">
                     CEP
                 </label>
@@ -164,6 +151,19 @@ export default function Inserir() {
                     id="cep"
                     value={cep}
                     onChange={(e) => setCep(e.target.value)}
+                />
+                </div>
+
+                <div className="mb-3">
+                <label htmlFor="address" className="form-label">
+                    Endereço
+                </label>
+                <input
+                    type="text"
+                    className="form-control"
+                    id="address"
+                    value={address}
+                    onChange={(e) => setAddress(e.target.value)}
                 />
                 </div>
     

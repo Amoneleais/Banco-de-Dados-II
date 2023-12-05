@@ -40,8 +40,8 @@ export default function Inicio()
                             <th scope="col" width="15%">Email</th>
                             <th scope="col" width="5%">Data de Nascimento</th>
                             <th scope="col" width="15%">CPF</th>
-                            <th scope="col" width="25%">Endereço</th>
                             <th scope="col" width="15%">CEP</th>
+                            <th scope="col" width="25%">Endereço</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -52,8 +52,8 @@ export default function Inicio()
                                 <td>{post.email}</td>
                                 <td>{new Date(post.nascimento).toLocaleDateString('pt-BR')}</td>
                                 <td>{post.cpf}</td>
-                                <td>{post.endereco}</td>
                                 <td>{post.cep}</td>
+                                <td>{post.endereco}</td>
                                 <th className="text-center"><Link className="btn btn-primary" to="/Atualizar" state={{id: post._id}} >Editar</Link></th>
                                 <th className="text-center"><Link className="btn btn-danger" to="/" onClick={(e) => { e.preventDefault(); handleDelete(post._id) }}>Excluir</Link></th>
                             </tr>
