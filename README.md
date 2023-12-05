@@ -68,11 +68,6 @@ Você pode optar por iniciar apenas o Back End para testes ou iniciar ambos Fron
 ```http
   GET /api/users/${id}
 ```
-
-| Parâmetro   | Tipo       | Descrição                                   |
-| :---------- | :--------- | :------------------------------------------ |
-| `id`      | `int` | **Obrigatório**. O ID do usuário que você quer buscar |
-
 #### Atualiza um usuário específico
 ```http
   PATCH /api/users/${id}
@@ -80,7 +75,6 @@ Você pode optar por iniciar apenas o Back End para testes ou iniciar ambos Fron
 
 | Parâmetro   | Tipo       | Descrição                                   |
 | :---------- | :--------- | :------------------------------------------ |
-| `id`      | `int` | **Obrigatório**. O ID do usuário que você quer atualizar |
 | `nome` | `string` | **Opcional**. Nome do Usuário |
 | `email` | `string` | **Opcional**. Email do Usuário |
 | `cpf` | `string` | **Opcional**. Cadastro de Pessoas Físicas do Usuário|
@@ -95,7 +89,3 @@ Você pode optar por iniciar apenas o Back End para testes ou iniciar ambos Fron
 ```http
   GET /api/users/${id}
 ```
-
-| Parâmetro   | Tipo       | Descrição                                   |
-| :---------- | :--------- | :------------------------------------------ |
-| `id`      | `int` | **Obrigatório**. O ID do usuário que você quer remover |
