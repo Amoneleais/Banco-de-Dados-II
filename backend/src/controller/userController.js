@@ -30,6 +30,7 @@ const UserController = {
     },
     getAll: async (req, res) => {
       try{
+        //Busca todos os
         let getAll = await Users.find().toArray();
         res.send(getAll).status(200);
       } catch (err){
@@ -48,8 +49,14 @@ const UserController = {
     update: async (req, res) => {
       try{
         const id = parseInt(req.params.id);
-        const { nome, email, cpf, nascimento, cep, endereco } = req.body;
-        const updatedUser = { nome, email, cpf, nascimento, cep, endereco };
+        const updateFields = req.body;
+        let getUser = await Users.findOne({_id: id});
+        const updatedUser = { ...getUser };
+        for (const field in updateFields) {
+          if (updateFields.hasOwnProperty(field)) {
+            updatedUser[field] = updateFields[field];
+          }
+        }
         const update = await Users.updateOne({_id: id}, {$set: updatedUser});
         res.send(update).status(200);
       }catch(err){
