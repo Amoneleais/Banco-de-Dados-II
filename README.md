@@ -54,9 +54,8 @@ Você pode optar por iniciar apenas o Back End para testes ou iniciar ambos Fron
 | `endereco` | `string` | **Obrigatório**. Endereço do Usuário |
 
 * Ao inserir uma data, terá de ser feito utilizando modelo do seguinte exemplo:
-```
-                                "2003-06-17T08:30:00.000Z"
-```
+
+ ### "2003-06-17T08:30:00.000Z"
 
 #### Retorna todos os usuários
 
