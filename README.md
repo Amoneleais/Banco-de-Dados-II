@@ -86,5 +86,5 @@ Você pode optar por iniciar apenas o Back End para testes ou iniciar ambos Fron
 #### Remove um usuário específico
 
 ```http
-  GET /api/users/${id}
+  DELETE /api/users/${id}
 ```
