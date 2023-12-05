@@ -30,7 +30,6 @@ const UserController = {
     },
     getAll: async (req, res) => {
       try{
-        //Busca todos os
         let getAll = await Users.find().toArray();
         res.send(getAll).status(200);
       } catch (err){
@@ -52,6 +51,7 @@ const UserController = {
         const updateFields = req.body;
         let getUser = await Users.findOne({_id: id});
         const updatedUser = { ...getUser };
+        //Faz um merge apenas onde foi alterado
         for (const field in updateFields) {
           if (updateFields.hasOwnProperty(field)) {
             updatedUser[field] = updateFields[field];
