@@ -41,7 +41,7 @@ Você pode optar por iniciar apenas o Back End para testes ou iniciar ambos Fron
 #### Insere um novo usuário
 
 ```http
-  POST /api/users
+  POST /api/users/create
 ```
 
 | Parâmetro   | Tipo       | Descrição                           |
@@ -60,16 +60,16 @@ Você pode optar por iniciar apenas o Back End para testes ou iniciar ambos Fron
 #### Retorna todos os usuários
 
 ```http
-  GET /api/users
+  GET /api/users/get
 ```
 #### Retorna um usuário específico
 
 ```http
-  GET /api/users/${id}
+  GET /api/users/get/${id}
 ```
 #### Atualiza um usuário específico
 ```http
-  PATCH /api/users/${id}
+  PATCH /api/users/update/${id}
 ```
 
 | Parâmetro   | Tipo       | Descrição                                   |
@@ -86,5 +86,5 @@ Você pode optar por iniciar apenas o Back End para testes ou iniciar ambos Fron
 #### Remove um usuário específico
 
 ```http
-  DELETE /api/users/${id}
+  DELETE /api/users/delete/${id}
 ```
