@@ -18,7 +18,7 @@ const UserController = {
           return res.status(400).json({ error: 'Invalid input' });
         }
         //Busca o último usuário inserido na coleção usuários
-        const lastUser = await Users.findOne({}, { sort: { _id: 1 } });
+        const lastUser = await Users.findOne({}, { sort: { _id: -1 } });
         //Algorítmo para incrementar o id mais recente
         const newId = lastUser ? lastUser._id + 1 : 1;
         const newUser = { _id: newId, nome, email, cpf, nascimento, cep, endereco };      
