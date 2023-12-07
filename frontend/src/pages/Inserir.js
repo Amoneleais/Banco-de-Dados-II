@@ -16,7 +16,7 @@ export default function Inserir() {
 
     
 async function clickInsert() {
-    await fetch('http://localhost:9900/api/users/', {
+    await fetch('http://localhost:9900/api/users/create', {
         method: 'POST',
         body: JSON.stringify({
             nome: name,

@@ -5,7 +5,7 @@ export default function Inicio()
 {
     const [posts, setPosts] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:9900/api/users/')
+        fetch('http://localhost:9900/api/users/get')
           .then((response) => response.json())
           .then((data) => {
             setPosts(data);
@@ -18,7 +18,7 @@ export default function Inicio()
 
     const handleDelete = async (id) => {
         try {
-            await fetch(`http://localhost:9900/api/users/${id}`, {
+            await fetch(`http://localhost:9900/api/users/delete/${id}`, {
                 method: 'DELETE',
             });
             const updatedPosts = posts.filter((post) => post._id !== id);

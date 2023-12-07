@@ -22,7 +22,7 @@ export default function Inserir() {
 
     async function clickUpdate(e) {
         e.preventDefault();
-        await fetch(`http://localhost:9900/api/users/${id}`, {
+        await fetch(`http://localhost:9900/api/users/update/${id}`, {
             method: 'PATCH',
             body: JSON.stringify({
                 nome: name,
@@ -63,7 +63,7 @@ export default function Inserir() {
         console.log(idFromLocation)
         if (idFromLocation && name === '') {
             try {
-                const response = await fetch(`http://localhost:9900/api/users/${idFromLocation}`);
+                const response = await fetch(`http://localhost:9900/api/users/get/${idFromLocation}`);
                 const data = await response.json();
                 console.log(data);
                 setName(data.nome);
